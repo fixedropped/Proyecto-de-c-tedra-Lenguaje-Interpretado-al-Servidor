@@ -3,14 +3,12 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    // Validación básica
     if(email === "" || password === ""){
         alert("Todos los campos son obligatorios");
         e.preventDefault();
         return;
     }
 
-    // Validar formato de correo
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if(!regex.test(email)){
@@ -19,10 +17,17 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
         return;
     }
 
-    // Validar contraseña
-    if(password.length < 6){
-        alert("La contraseña debe tener al menos 6 caracteres");
+    if(password.length < 3){
+        alert("Contraseña muy corta");
         e.preventDefault();
         return;
     }
+
+    // 🔍 DETECCIÓN VISUAL (solo consola)
+    if(email.includes("admin")){
+        console.log("Intento de acceso como ADMIN");
+    } else {
+        console.log("Intento de acceso como USUARIO");
+    }
+
 });

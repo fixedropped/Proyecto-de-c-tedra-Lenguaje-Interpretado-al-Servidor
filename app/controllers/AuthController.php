@@ -11,25 +11,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $usuario = Usuario::buscarPorEmail($email);
 
-    if ($usuario && password_verify($password, $usuario->password)) {
+    if ($usuario) {
 
-        // Guardar sesión
-        $usuario->guardarEnSesion();
+        // ⚠️ COMPARACIÓN SIMPLE (modo pruebas)
+        if ($password === $usuario->password) {
 
-        // 🔥 VALIDAR ROL
-        if ($usuario->id_rol == 1) {
-            // ADMIN
-            header('Location: /../views/menu_admin.php');
-            exit();
-        } else if ($usuario->id_rol == 2) {
-            // USUARIO NORMAL
-            header('Location: /../views/menu_admin.php');
-            exit();
+            $usuario->guardarEnSesion();
+
+            // 🔥 REDIRECCIÓN POR ROL
+            if ($usuario->id_rol == 1) {
+                header("Location: ../views/menu_admin.php");
+                exit();
+            } else if ($usuario->id_rol == 2) {
+                header("Location: ../views/servicios.php");
+                exit();
+            }
+
         } else {
-            echo "❌ Rol no reconocido";
+            header("Location: ../../public/views/login.php?error=1");
+            exit();
         }
 
     } else {
-        echo "❌ Credenciales incorrectas";
+        header("Location: ../../public/views/login.php?error=1");
+        exit();
     }
 }

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Login</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/login.css">
 </head>
 <body>
 
 <div class="login-container">
     <h2>Iniciar Sesión</h2>
+
+    <!-- ERROR -->
+    <?php if(isset($_GET['error'])): ?>
+        <div class="alerta-error">Correo o contraseña incorrectos</div>
+    <?php endif; ?>
 
     <form id="loginForm" method="POST" action="../../app/controllers/AuthController.php">
 
@@ -23,7 +27,6 @@
     </form>
 </div>
 
-<!-- JS -->
 <script src="../../public/js/login.js"></script>
 
 </body>

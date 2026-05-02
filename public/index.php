@@ -13,7 +13,7 @@
 <!-- 🔵 MENÚ SUPERIOR -->
 <div class="menu">
     <a href="../app/views/quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
-    <a href="servicios.php" class="boton">SERVICIOS</a>
+    <a href="../app/views/servicios.php" class="boton">SERVICIOS</a>
     <a href="../app/views/buzon.php" class="boton">BUZÓN</a>
     <a href="../app/views/casos.php" class="boton">CASOS ACTUALES</a>
     <a href="../app/views/login.php" class="boton">INICIAR SESIÓN</a>
