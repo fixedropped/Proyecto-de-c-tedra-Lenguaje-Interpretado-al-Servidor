@@ -8,7 +8,7 @@
 - JS
 - DockerFile
 ## Autores
-Proyecto de cátedra Fase 1 – 2026-03-16
+Proyecto de cátedra Fase 2 – 2026-05-03
 Luis Felipe Cuadra Cruz                                   CC230464
 Marvin José Guillén Lemus                                 GL210911
 Gerardo José Villanueva Hernandez                         VH230527
