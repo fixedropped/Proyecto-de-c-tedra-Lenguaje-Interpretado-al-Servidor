@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<div class="contenido">
+<div class="header">
     <h1>Bienvenido a Servicios Legales</h1>
 </div>
 <!-- 🔵 MENÚ SUPERIOR -->
 <div class="menu">
-    <a href="quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
+    <a href="../app/views/quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
     <a href="servicios.php" class="boton">SERVICIOS</a>
     <a href="../app/views/buzon.php" class="boton">BUZÓN</a>
     <a href="../app/views/casos.php" class="boton">CASOS ACTUALES</a>

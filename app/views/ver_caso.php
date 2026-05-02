@@ -12,7 +12,7 @@ $caso = $modelo->obtenerCasoPorId($id);
 <head>
     <meta charset="UTF-8">
     <title>Detalle del Caso</title>
-    <link rel="stylesheet" href="/PROYECTO_LIC/public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
 
