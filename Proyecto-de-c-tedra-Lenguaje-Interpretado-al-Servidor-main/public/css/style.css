@@ -1,0 +1,364 @@
+/* RESET GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body{
+    background: #eaf6ff;
+}
+
+/* HEADER */
+.header{
+    padding: 20px;
+    background: #d6eaf8;
+}
+
+.header h1{
+    color: #2e86c1;
+}
+
+.header p{
+    color: #555;
+}
+
+
+/* MENÚ */
+.menu{
+    display: flex;
+    width: 100%;
+    background: #5dade2;
+}
+
+.boton{
+    flex: 1;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-right: 1px solid #d6eaf8;
+    transition: 0.3s;
+}
+
+.boton:last-child{
+    border-right: none;
+}
+
+.boton:hover{
+    background: #3498db;
+}
+
+
+/* BUZÓN */
+.buzon-container{
+    width: 50%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.buzon-container h2{
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.buzon-container input,
+.buzon-container textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.buzon-container textarea{
+    height: 120px;
+    resize: none;
+}
+
+.buzon-container button{
+    width: 100%;
+    padding: 12px;
+    background: #5dade2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buzon-container button:hover{
+    background: #3498db;
+}
+
+
+/* BOTÓN VER SUGERENCIAS */
+.boton-secundario{
+    display: inline-block;
+    padding: 12px 25px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.boton-secundario:hover{
+    background: #2e86c1;
+    transform: scale(1.05);
+}
+
+
+/* TABLA */
+.tabla-container{
+    width: 95%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.tabla-container h2{
+    color: #2e86c1;
+    margin-bottom: 10px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ENCABEZADO */
+th{
+    background: linear-gradient(90deg, #5dade2, #3498db);
+    color: white;
+    padding: 14px;
+    font-weight: bold;
+    border-bottom: 3px solid #2e86c1;
+}
+
+/* CELDAS */
+td{
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+/* FILAS */
+tr:nth-child(even){
+    background: #f8fbff;
+}
+
+/* HOVER */
+tr:hover{
+    background: #eaf4ff;
+    transition: 0.2s;
+}
+
+/* PRIMERA COLUMNA */
+td:first-child{
+    font-weight: bold;
+    color: #2e86c1;
+}
+
+
+/* BOTÓN ELIMINAR */
+.btn-eliminar{
+    padding: 6px 12px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-eliminar:hover{
+    background: #c0392b;
+    transform: scale(1.08);
+}
+
+
+/* MENSAJES */
+.alerta-exito{
+    width: 50%;
+    margin: 15px auto;
+    padding: 12px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 6px;
+}
+
+.alerta-error{
+    width: 50%;
+    margin: 15px auto;
+    padding: 12px;
+    background: #f8d7da;
+    color: #721c24;
+    border-radius: 6px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .menu{
+        flex-direction: column;
+    }
+
+    .buzon-container{
+        width: 90%;
+    }
+
+    .tabla-container{
+        width: 100%;
+        padding: 10px;
+    }
+
+    table{
+        font-size: 12px;
+    }
+
+    th, td{
+        padding: 8px;
+    }
+}
+
+/* CONTENEDOR DETALLE */
+.detalle-container{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    gap: 20px;
+}
+
+/* COLUMNAS */
+.lado-izq, .lado-der{
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* TITULOS */
+.lado-der h2{
+    color: #2e86c1;
+}
+
+/* INPUT FILE */
+.lado-izq input[type="file"]{
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* BOTÓN SUBIR */
+.lado-izq button{
+    width: 100%;
+    padding: 10px;
+    background: #5dade2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lado-izq button:hover{
+    background: #3498db;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .detalle-container{
+        flex-direction: column;
+    }
+}
+
+/* ========================================= */
+/* AGREGAR AL FINAL DEL ARCHIVO style.css    */
+/* PARA HACER TODO MÁS GRANDE Y BONITO       */
+/* ========================================= */
+
+/* TAMAÑO BASE MÁS GRANDE */
+html {
+    font-size: 18px;
+}
+
+body {
+    font-size: 1rem;
+}
+
+/* BOTONES MÁS GRANDES */
+.boton, .boton-admin, button {
+    font-size: 1.1rem !important;
+    padding: 14px 25px !important;
+}
+
+/* MENÚ SUPERIOR MÁS ALTO */
+.menu .boton {
+    padding: 18px 0 !important;
+    font-size: 1rem !important;
+}
+
+/* TÍTULOS MÁS GRANDES */
+.header h1 {
+    font-size: 2.2rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+}
+
+/* TABLAS MÁS LEGIBLES */
+table {
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 15px 12px !important;
+}
+
+/* FORMULARIOS MÁS GRANDES */
+input, textarea, select {
+    font-size: 1rem !important;
+    padding: 14px !important;
+}
+
+/* CONTENEDORES MÁS ESPACIOSOS */
+.login-container, .buzon-container, .tabla-container, .admin-container {
+    padding: 40px !important;
+}
+
+/* TARJETAS (para servicios y demás) */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* BOTONES DE ACCIÓN */
+.btn-eliminar, .btn-editar {
+    font-size: 0.9rem;
+    padding: 8px 16px !important;
+}
