@@ -4,36 +4,48 @@ require_once '../models/Usuario.php';
 
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// =========================
+// LOGIN
+// =========================
+if (isset($_POST['login'])) {
 
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     $usuario = Usuario::buscarPorEmail($email);
 
-    if ($usuario) {
+    if ($usuario && $password === $usuario->password) {
 
-        // ⚠️ COMPARACIÓN SIMPLE (modo pruebas)
-        if ($password === $usuario->password) {
+        $usuario->guardarEnSesion();
 
-            $usuario->guardarEnSesion();
-
-            // 🔥 REDIRECCIÓN POR ROL
-            if ($usuario->id_rol == 1) {
-                header("Location: ../views/menu_admin.php");
-                exit();
-            } else if ($usuario->id_rol == 2) {
-                header("Location: ../views/servicios.php");
-                exit();
-            }
-
+        if ($usuario->id_rol == 1) {
+            header("Location: ../views/menu_admin.php");
         } else {
-            header("Location: ../../public/views/login.php?error=1");
-            exit();
+            header("Location: ../views/servicios.php");
         }
+        exit();
 
     } else {
-        header("Location: ../../public/views/login.php?error=1");
+        header("Location: ../views/login.php?error=1");
         exit();
     }
+}
+
+// =========================
+// REGISTRO
+// =========================
+if (isset($_POST['registro'])) {
+
+    $usuario = new Usuario();
+
+    $usuario->nombre = $_POST['nombre'];
+    $usuario->email = $_POST['email_reg'];
+    $usuario->password = $_POST['password_reg'];
+    $usuario->telefono = $_POST['telefono'];
+    $usuario->id_rol = 2; // usuario normal
+
+    $usuario->guardar();
+
+    header("Location: ../views/login.php?registro=ok");
+    exit();
 }

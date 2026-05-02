@@ -45,28 +45,52 @@ class Usuario {
         // INSERT
         if ($this->id_usuario === null) {
 
-            $sql = "INSERT INTO usuario 
-                    (nombre, email, password, telefono, id_rol, fecha_registro)
-                    VALUES 
-                    (:nombre, :email, :password, :telefono, :id_rol, NOW())";
+            try {
 
-            $stmt = $this->conexion->prepare($sql);
+        $sql = "INSERT INTO usuario 
+                (nombre, email, password, telefono, id_rol, fecha_registro)
+                VALUES 
+                (:nombre, :email, :password, :telefono, :id_rol, NOW())";
 
-            $passwordHash = password_hash($this->password, PASSWORD_DEFAULT);
+        $stmt = $this->conexion->prepare($sql);
 
-            $stmt->bindParam(':nombre', $this->nombre);
-            $stmt->bindParam(':email', $this->email);
-            $stmt->bindParam(':password', $passwordHash);
-            $stmt->bindParam(':telefono', $this->telefono);
-            $stmt->bindParam(':id_rol', $this->id_rol);
+        $passwordHash = password_hash($this->password, PASSWORD_DEFAULT);
 
-            $resultado = $stmt->execute();
+        $stmt->bindParam(':nombre', $this->nombre);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':password', $passwordHash);
+        $stmt->bindParam(':telefono', $this->telefono);
+        $stmt->bindParam(':id_rol', $this->id_rol);
 
-            if ($resultado) {
-                $this->id_usuario = $this->conexion->lastInsertId();
+        $resultado = $stmt->execute();
+
+        if ($resultado) {
+            $this->id_usuario = $this->conexion->lastInsertId();
+            return true;
+        }
+
+        return false;
+
+    } catch (PDOException $e) {
+
+        // 🔥 ERROR DE DUPLICADO (email único, etc.)
+        if ($e->getCode() == 23000) {
+
+            // Puedes personalizar según el mensaje
+            if (strpos($e->getMessage(), 'email') !== false) {
+                return "error_email";
             }
 
-            return $resultado;
+            if (strpos($e->getMessage(), 'telefono') !== false) {
+                return "error_telefono";
+            }
+
+            return "error_duplicado";
+        }
+
+        // 🔥 OTRO ERROR SQL
+        return "error_general";
+    }
         }
 
         // UPDATE
@@ -206,6 +230,29 @@ class Usuario {
 
     public static function cerrarSesion() {
         unset($_SESSION['usuario']);
+    }
+
+
+
+        // Verificar si el correo ya existe
+    public static function correoExiste($email) {
+        $db = Conexion::conectar();
+
+        $stmt = $db->prepare("SELECT id FROM usuarios WHERE email = ?");
+        $stmt->execute([$email]);
+
+        return $stmt->fetch() ? true : false;
+    }
+
+    // Registrar usuario (con contraseña segura)
+    public static function registrar($nombre, $email, $password) {
+        $db = Conexion::conectar();
+
+        // Encriptar contraseña
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+        $stmt = $db->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)");
+        return $stmt->execute([$nombre, $email, $passwordHash]);
     }
 
 }
