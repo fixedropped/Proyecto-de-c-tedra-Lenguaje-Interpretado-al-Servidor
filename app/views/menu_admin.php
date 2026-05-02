@@ -16,7 +16,7 @@
 
         <a href="Clientes_Admin.php" class="boton-admin">Clientes Actuales</a>
 
-        <a href="AgregarSocio.php" class="boton-admin">Agregar Socios</a>
+        <a href="Agregar_socio.php" class="boton-admin">Agregar Socios</a>
 
         <a href="BuzonAdmin.php" class="boton-admin">Buzón</a>
 

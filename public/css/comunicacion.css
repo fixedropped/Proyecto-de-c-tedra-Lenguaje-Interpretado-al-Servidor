@@ -1,0 +1,62 @@
+body{
+    background: linear-gradient(135deg, #eaf6ff, #d6eaf8);
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 3px solid #5dade2;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align: center;
+    color: #2e86c1;
+    margin-bottom: 20px;
+}
+
+/* TABLA */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    background: #5dade2;
+    color: white;
+    padding: 12px;
+}
+
+td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* BOTÓN */
+button{
+    padding: 6px 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #2e86c1;
+}
+
+/* MENSAJE OCULTO */
+.fila-oculta{
+    display: none;
+    background: #f8fbff;
+}
+
+.fila-oculta td{
+    text-align: left;
+    font-style: italic;
+}
