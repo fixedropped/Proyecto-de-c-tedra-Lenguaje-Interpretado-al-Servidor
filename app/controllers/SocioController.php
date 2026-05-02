@@ -19,7 +19,7 @@ if (isset($_POST['crear'])) {
 
     $usuario->guardar();
 
-    header("Location: ../views/AgregarSocio.php");
+    header("Location: ../views/Agregar_socio.php");
     exit();
 }
 
@@ -37,6 +37,6 @@ if (isset($_GET['eliminar'])) {
     $stmt->bindParam(':id', $id);
     $stmt->execute();
 
-    header("Location: ../views/AgregarSocio.php");
+    header("Location: ../views/Agregar_socio.php");
     exit();
 }

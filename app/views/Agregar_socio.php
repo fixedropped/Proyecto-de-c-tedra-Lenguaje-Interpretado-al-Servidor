@@ -27,7 +27,7 @@ $admins = array_filter(Usuario::obtenerTodos(), function($u){
         <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="email" name="email" placeholder="Correo" required>
         <input type="password" name="password" placeholder="Contraseña" required>
-        <input type="text" name="telefono" placeholder="Teléfono">
+        <input type="text" name="telefono" placeholder="Teléfono" required>
 
         <!-- rol fijo como admin -->
         <input type="hidden" name="id_rol" value="1">
