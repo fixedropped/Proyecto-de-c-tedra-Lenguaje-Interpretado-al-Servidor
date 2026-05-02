@@ -21,7 +21,7 @@ $casos = $modelo->obtenerCasos();
 <div class="menu">
     <a href="quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
     <a href="servicios.php" class="boton">SERVICIOS</a>
-    <a href="../views/buzon.php" class="boton">BUZÓN</a>
+    <a href="buzon.php" class="boton">BUZÓN</a>
     <a href="casos.php" class="boton">CASOS ACTUALES</a>
     <a href="login.php" class="boton">INICIAR SESIÓN</a>
     <a href="../../public/index.php" class="boton">VOLVER</a>

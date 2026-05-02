@@ -16,7 +16,7 @@
     <a href="servicios.php" class="boton">SERVICIOS</a>
     <a href="../app/views/buzon.php" class="boton">BUZÓN</a>
     <a href="../app/views/casos.php" class="boton">CASOS ACTUALES</a>
-    <a href="login.php" class="boton">INICIAR SESIÓN</a>
+    <a href="../app/views/login.php" class="boton">INICIAR SESIÓN</a>
 </div>
 
 <div class="contenido">

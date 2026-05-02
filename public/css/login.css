@@ -1,0 +1,82 @@
+/* FONDO GENERAL */
+body{
+    background: linear-gradient(135deg, #eaf6ff, #d6eaf8);
+    font-family: Arial, sans-serif;
+}
+
+/* CONTENEDOR */
+.login-container{
+    width: 40%;
+    margin: 80px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+
+    /* borde azul */
+    border: 3px solid #5dade2;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* TITULO */
+.login-container h2{
+    color: #2e86c1;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
+}
+
+/* INPUTS */
+.login-container input{
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    transition: 0.3s;
+}
+
+/* EFECTO FOCUS */
+.login-container input:focus{
+    border-color: #5dade2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(93,173,226,0.5);
+}
+
+/* BOTÓN INGRESAR */
+.login-container button{
+    width: 100%;
+    padding: 12px;
+    background: #5dade2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-container button:hover{
+    background: #3498db;
+    transform: scale(1.03);
+}
+
+/* BOTÓN VOLVER */
+.boton-volver{
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: #2e86c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-volver:hover{
+    background: #1f618d;
+    transform: scale(1.05);
+}
