@@ -19,7 +19,7 @@ $mensajes = $stmt->fetchAll();
     <meta charset="UTF-8">
     <title>Comunicación</title>
 
-    <link rel="stylesheet" href="../../public/css/comunicacion.css">
+    <link rel="stylesheet" href="../../public/css/BuzonAdmin.css">
 </head>
 <body>
 
@@ -63,7 +63,7 @@ $mensajes = $stmt->fetchAll();
 
 </div>
 
-<script src="../../public/js/comunicacion.js"></script>
+<script src="../../public/js/BuzonAdmin.js"></script>
 
 </body>
 </html>
