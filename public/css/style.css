@@ -287,3 +287,78 @@ td:first-child{
         flex-direction: column;
     }
 }
+
+/* ========================================= */
+/* AGREGAR AL FINAL DEL ARCHIVO style.css    */
+/* PARA HACER TODO MÁS GRANDE Y BONITO       */
+/* ========================================= */
+
+/* TAMAÑO BASE MÁS GRANDE */
+html {
+    font-size: 18px;
+}
+
+body {
+    font-size: 1rem;
+}
+
+/* BOTONES MÁS GRANDES */
+.boton, .boton-admin, button {
+    font-size: 1.1rem !important;
+    padding: 14px 25px !important;
+}
+
+/* MENÚ SUPERIOR MÁS ALTO */
+.menu .boton {
+    padding: 18px 0 !important;
+    font-size: 1rem !important;
+}
+
+/* TÍTULOS MÁS GRANDES */
+.header h1 {
+    font-size: 2.2rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+}
+
+/* TABLAS MÁS LEGIBLES */
+table {
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 15px 12px !important;
+}
+
+/* FORMULARIOS MÁS GRANDES */
+input, textarea, select {
+    font-size: 1rem !important;
+    padding: 14px !important;
+}
+
+/* CONTENEDORES MÁS ESPACIOSOS */
+.login-container, .buzon-container, .tabla-container, .admin-container {
+    padding: 40px !important;
+}
+
+/* TARJETAS (para servicios y demás) */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* BOTONES DE ACCIÓN */
+.btn-eliminar, .btn-editar {
+    font-size: 0.9rem;
+    padding: 8px 16px !important;
+}

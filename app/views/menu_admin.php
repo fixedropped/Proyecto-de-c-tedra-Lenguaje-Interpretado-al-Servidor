@@ -24,7 +24,11 @@
 
         <a href="Comunicacion.php" class="boton-admin">Comunicación</a>
 
+       <a href="admin_servicios.php" class="boton-admin">⚙️ Gestionar Servicios</a>
+
         <a href="../../public/index.php" class="boton-admin volver">Volver</a>
+
+        
 
     </div>
 </div>

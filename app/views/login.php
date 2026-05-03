@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Iniciar Sesión - CC Asociados</title>
     <link rel="stylesheet" href="../../public/css/login.css">
 </head>
 <body>
@@ -12,33 +12,30 @@
     <h2>Iniciar Sesión</h2>
 
     <?php if(isset($_GET['error'])): ?>
-        <div class="alerta-error">Credenciales incorrectas</div>
+        <?php if($_GET['error'] == 'campos_vacios'): ?>
+            <div class="alerta-error">❌ Complete todos los campos</div>
+        <?php elseif($_GET['error'] == 'email_invalido'): ?>
+            <div class="alerta-error">❌ El formato del correo no es válido</div>
+        <?php elseif($_GET['error'] == 'credenciales'): ?>
+            <div class="alerta-error">❌ Correo o contraseña incorrectos</div>
+        <?php endif; ?>
     <?php endif; ?>
 
-    <form id="loginForm" method="POST" action="../../app/controllers/AuthController.php">
-        <input type="email" name="email" id="email" placeholder="Correo" required>
-        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+    <?php if(isset($_GET['registro']) && $_GET['registro'] == 'ok'): ?>
+        <div class="alerta-exito">✅ Registro exitoso. Ahora puede iniciar sesión</div>
+    <?php endif; ?>
 
-
+    <form method="POST" action="../../app/controllers/AuthController.php">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
         <button type="submit" name="login">Ingresar</button>
     </form>
 
     <hr>
 
-    <!-- 🔥 REGISTRO -->
-    <h3>Crear Cuenta</h3>
+    <p>¿No tienes cuenta? <a href="registro.php">Regístrate aquí</a></p>
 
-    <form id="registroForm" method="POST" action="../../app/controllers/AuthController.php">
-
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
-        <input type="email" name="email_reg" placeholder="Correo" required>
-        <input type="password" name="password_reg" placeholder="Contraseña" required>
-        <input type="text" name="telefono" placeholder="Teléfono">
-
-        <button type="submit" name="registro">Registrarse</button>
-    </form>
-
-    <a href="../public/index.php" class="boton-volver">VOLVER</a>
+    <a href="../../public/index.php" class="boton-volver">VOLVER AL INICIO</a>
 
 </div>
 

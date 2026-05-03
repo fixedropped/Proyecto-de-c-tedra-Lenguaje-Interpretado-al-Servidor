@@ -1,6 +1,12 @@
 <?php
+session_start();
 require_once '../models/Conexion.php';
 
+
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['data']['id_rol'] != 1) {
+    header("Location: login.php");
+    exit();
+}
 $conexion = Conexion::conectar();
 
 // traer mensajes + email del usuario

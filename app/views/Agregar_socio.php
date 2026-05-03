@@ -1,7 +1,10 @@
 <?php
-require_once '../models/Usuario.php';
 session_start();
-
+require_once '../models/Usuario.php';
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario']['data']['id_rol'] != 1) {
+    header("Location: login.php");
+    exit();
+}
 // obtener admins
 $admins = array_filter(Usuario::obtenerTodos(), function($u){
     return $u->id_rol == 1;

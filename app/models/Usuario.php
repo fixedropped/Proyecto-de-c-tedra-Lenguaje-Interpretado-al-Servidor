@@ -88,7 +88,7 @@ class Usuario {
             return "error_duplicado";
         }
 
-        // 🔥 OTRO ERROR SQL
+        // OTRO ERROR SQL
         return "error_general";
     }
         }

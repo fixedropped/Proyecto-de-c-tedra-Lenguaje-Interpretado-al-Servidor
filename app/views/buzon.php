@@ -67,13 +67,18 @@ $mensaje = $_GET['msg'] ?? "";
 
 <?php if($mensaje == "ok"): ?>
 <script>
-    alert("✅ Sugerencia enviada correctamente");
+    alert(" Sugerencia enviada correctamente");
 </script>
 <?php elseif($mensaje == "error"): ?>
 <script>
-    alert("❌ Error al enviar la sugerencia");
+    alert(" Error al enviar la sugerencia");
 </script>
 <?php endif; ?>
 
 </body>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 CC & Asociados - Todos los derechos reservados</p>
+</footer>
 </html>

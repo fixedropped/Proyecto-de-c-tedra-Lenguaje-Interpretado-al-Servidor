@@ -1,0 +1,101 @@
+/* GENERAL */
+body{
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #eaf6ff, #d6eaf8);
+}
+
+/* HEADER */
+.header{
+    text-align: center;
+    padding: 20px;
+    background: #d6eaf8;
+}
+
+.header h1{
+    color: #2e86c1;
+}
+
+/* MENU */
+.menu{
+    display: flex;
+    background: #5dade2;
+}
+
+.boton{
+    flex: 1;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background: #3498db;
+}
+
+/* CONTENEDOR */
+.contenedor{
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contenedor h2{
+    color: #2e86c1;
+}
+
+/* SLIDER */
+.slider{
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.slides{
+    display: flex;
+    width: 400%;
+    animation: slide 30s infinite;
+}
+
+/* TARJETAS */
+.card{
+    width: 25%;
+    background: white;
+    margin: 0 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3{
+    color: #2e86c1;
+}
+
+.card p{
+    padding: 10px;
+}
+
+/* ANIMACIÓN */
+@keyframes slide{
+    0% {margin-left: 0;}
+    25% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    100% {margin-left: 0;}
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 15px;
+    background: #2e86c1;
+    color: white;
+    margin-top: 40px;
+}
