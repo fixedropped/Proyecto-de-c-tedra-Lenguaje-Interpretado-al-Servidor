@@ -583,4 +583,10 @@ function obtenerIconoCategoria($nombre) {
 </script>
 
 </body>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 CC & Asociados - Todos los derechos reservados</p>
+</footer>
 </html>

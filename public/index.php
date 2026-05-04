@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>CC Asociados</title>
-
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -14,7 +13,7 @@
     <p>Soluciones legales confiables</p>
 </div>
 
-<!-- MENÚ -->
+<!-- MENÚ (SE MANTIENE IGUAL) -->
 <div class="menu">
     <a href="../app/views/quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
     <a href="../app/views/servicios.php" class="boton">SERVICIOS</a>
@@ -22,44 +21,30 @@
     <a href="../app/views/login.php" class="boton">INICIAR SESIÓN</a>
 </div>
 
-<!-- CONTENEDOR PRINCIPAL -->
+<!-- SECCIÓN PRINCIPAL -->
 <div class="contenedor">
 
-    <h2>Nuestros Servicios</h2>
+    <h2>Bienvenido a CC & Asociados</h2>
+    <p class="intro">
+        Somos un despacho comprometido con brindar asesoría legal profesional,
+        ética y personalizada en diferentes áreas del derecho.
+    </p>
 
-    <!-- SLIDER -->
-    <div class="slider">
+    <div class="bloques">
 
-        <div class="slides">
+        <div class="bloque">
+            <h3>Experiencia</h3>
+            <p>Contamos con profesionales capacitados para resolver tus casos con eficiencia.</p>
+        </div>
 
-            <!-- TARJETA 1 -->
-            <div class="card">
-                <img src="img/civil.jpg" alt="">
-                <h3>Derecho Civil</h3>
-                <p>Contratos, herencias y asesoría legal personalizada.</p>
-            </div>
+        <div class="bloque">
+            <h3>Confianza</h3>
+            <p>Trabajamos con transparencia y responsabilidad en cada proceso legal.</p>
+        </div>
 
-            <!-- TARJETA 2 -->
-            <div class="card">
-                <img src="img/penal.jpg" alt="">
-                <h3>Derecho Penal</h3>
-                <p>Defensa profesional en procesos judiciales.</p>
-            </div>
-
-            <!-- TARJETA 3 -->
-            <div class="card">
-                <img src="img/laboral.jpg" alt="">
-                <h3>Derecho Laboral</h3>
-                <p>Solución a conflictos laborales y despidos.</p>
-            </div>
-
-            <!-- TARJETA 4 -->
-            <div class="card">
-                <img src="img/asesoria.jpg" alt="">
-                <h3>Asesoría Legal</h3>
-                <p>Orientación profesional en todas las áreas del derecho.</p>
-            </div>
-
+        <div class="bloque">
+            <h3>Compromiso</h3>
+            <p>Defendemos tus derechos con dedicación y enfoque personalizado.</p>
         </div>
 
     </div>
@@ -68,7 +53,8 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 CC & Asociados - Todos los derechos reservados</p>
+    <p>© 2026 CC & Asociados</p>
+    <p>San Salvador, El Salvador</p>
 </footer>
 
 </body>

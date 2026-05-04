@@ -51,7 +51,7 @@ class Servicio {
                     'id' => $row['id_servicio'],
                     'nombre' => $row['servicio_nombre'],
                     'descripcion' => $row['servicio_descripcion'],
-                    'imagen' => $row['imagen'] ? '../../public/' . $row['imagen'] : null
+                    'imagen' => $row['imagen'] ? '../../public/img/' . $row['imagen'] : null
                 ];
             }
         }

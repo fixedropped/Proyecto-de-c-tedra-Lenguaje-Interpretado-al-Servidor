@@ -1,101 +1,86 @@
-/* GENERAL */
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
 body{
-    margin: 0;
-    font-family: Arial;
-    background: linear-gradient(135deg, #eaf6ff, #d6eaf8);
+    background:#f4f6f9;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
 }
 
 /* HEADER */
 .header{
-    text-align: center;
-    padding: 20px;
-    background: #d6eaf8;
-}
-
-.header h1{
-    color: #2e86c1;
+    background:#1f3c88;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
 /* MENU */
 .menu{
-    display: flex;
-    background: #5dade2;
+    background:#162447;
+    text-align:center;
+    padding:15px;
 }
 
 .boton{
-    flex: 1;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    padding:10px 15px;
+    display:inline-block;
+    border-radius:5px;
+    transition:0.3s;
 }
 
 .boton:hover{
-    background: #3498db;
+    background:#1f4068;
 }
 
 /* CONTENEDOR */
 .contenedor{
-    width: 90%;
-    margin: 40px auto;
-    text-align: center;
+    width:80%;
+    margin:40px auto;
+    text-align:center;
+    flex:1;
 }
 
-.contenedor h2{
-    color: #2e86c1;
+.intro{
+    margin:20px 0 40px;
+    color:#555;
 }
 
-/* SLIDER */
-.slider{
-    overflow: hidden;
-    margin-top: 30px;
+/* BLOQUES */
+.bloques{
+    display:flex;
+    justify-content:space-around;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.slides{
-    display: flex;
-    width: 400%;
-    animation: slide 30s infinite;
+.bloque{
+    background:white;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* TARJETAS */
-.card{
-    width: 25%;
-    background: white;
-    margin: 0 10px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h3{
-    color: #2e86c1;
-}
-
-.card p{
-    padding: 10px;
-}
-
-/* ANIMACIÓN */
-@keyframes slide{
-    0% {margin-left: 0;}
-    25% {margin-left: -100%;}
-    50% {margin-left: -200%;}
-    75% {margin-left: -300%;}
-    100% {margin-left: 0;}
+.bloque h3{
+    color:#1f3c88;
+    margin-bottom:10px;
 }
 
 /* FOOTER */
 footer{
-    text-align: center;
-    padding: 15px;
-    background: #2e86c1;
-    color: white;
-    margin-top: 40px;
+    background:#162447;
+    color:white;
+    text-align:center;
+    padding:15px;
 }

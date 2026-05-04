@@ -94,3 +94,7 @@ CREATE TABLE mensaje (
     leido BOOLEAN NOT NULL DEFAULT FALSE,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
+
+
+-- Agregar columna imagen a la tabla servicio
+ALTER TABLE servicio ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;
