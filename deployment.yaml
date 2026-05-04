@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cc-asociados-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cc-asociados
+  template:
+    metadata:
+      labels:
+        app: cc-asociados
+    spec:
+      containers:
+        - name: app
+          image: cc-asociados-app
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80

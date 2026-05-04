@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CC Asociados</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
 
@@ -15,10 +15,10 @@
 
 <!-- MENÚ (SE MANTIENE IGUAL) -->
 <div class="menu">
-    <a href="../app/views/quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
-    <a href="../app/views/servicios.php" class="boton">SERVICIOS</a>
-    <a href="../app/views/buzon.php" class="boton">BUZÓN</a>
-    <a href="../app/views/login.php" class="boton">INICIAR SESIÓN</a>
+    <a href="app/views/quienes_somos.php" class="boton">QUIÉNES SOMOS</a>
+    <a href="app/views/servicios.php" class="boton">SERVICIOS</a>
+    <a href="app/views/buzon.php" class="boton">BUZÓN</a>
+    <a href="app/views/login.php" class="boton">INICIAR SESIÓN</a>
 </div>
 
 <!-- SECCIÓN PRINCIPAL -->

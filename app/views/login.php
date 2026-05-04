@@ -35,8 +35,7 @@
 
     <p>¿No tienes cuenta? <a href="registro.php">Regístrate aquí</a></p>
 
-    <a href="../../public/index.php" class="boton-volver">VOLVER AL INICIO</a>
-
+    <a href="../../index.php" class="boton-volver">VOLVER AL INICIO</a>
 </div>
 
 <script src="../../public/js/login.js"></script>

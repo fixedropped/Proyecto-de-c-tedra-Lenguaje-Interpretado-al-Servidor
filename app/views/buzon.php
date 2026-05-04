@@ -1,13 +1,4 @@
 <?php
-// Simulación para prueba
-$id_usuario = 1;
-$correo = "cliente@email.com";
-
-// para cuando se creen las sesiones de usuario y
-//session_start();
-//$id_usuario = $_SESSION['id_usuario'];
-//$correo = $_SESSION['email'];
-
 $mensaje = $_GET['msg'] ?? "";
 ?>
 
@@ -33,7 +24,7 @@ $mensaje = $_GET['msg'] ?? "";
     <a href="buzon.php" class="boton">BUZÓN</a>
     <a href="casos.php" class="boton">CASOS ACTUALES</a>
     <a href="login.php" class="boton">INICIAR SESIÓN</a>
-    <a href="../../public/index.php" class="boton">VOLVER</a>
+    <a href="../../index.php" class="boton">VOLVER</a>
 </div>
 
 <!-- FORMULARIO -->
@@ -44,7 +35,7 @@ $mensaje = $_GET['msg'] ?? "";
     <form method="POST" action="../controllers/procesar_mensaje.php">
 
         <label>Correo:</label>
-        <input type="text" value="<?php echo $correo; ?>" readonly>
+        <input type="text">
 
         <label>Asunto:</label>
         <input type="text" name="asunto" required>

@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = "localhost";
+    private $host = "db";
     private $db_name = "cc_asociados";
     private $username = "root";
-    private $password = "";
+    private $password = "root";
 
     public function conectar() {
         try {

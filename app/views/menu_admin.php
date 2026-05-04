@@ -26,7 +26,7 @@
 
        <a href="admin_servicios.php" class="boton-admin">⚙️ Gestionar Servicios</a>
 
-        <a href="../../public/index.php" class="boton-admin volver">Volver</a>
+        <a href="../../index.php" class="boton-admin volver">Volver</a>
 
         
 
