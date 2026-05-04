@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: php-app
-          image: php-app   # 👈 tu imagen Docker
-          imagePullPolicy: Never
+          image: fixedropped/php-app
+          imagePullPolicy: Always
           ports:
             - containerPort: 80

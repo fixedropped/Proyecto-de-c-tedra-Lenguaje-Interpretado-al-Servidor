@@ -1,6 +1,6 @@
 <?php
 class Database {
-    private $host = "db";
+    private $host = "mysql";
     private $db_name = "cc_asociados";
     private $username = "root";
     private $password = "root";
